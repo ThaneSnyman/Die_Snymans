@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Save the Date · Thane &amp; Chanel</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#a9cbe3;box-sizing:border-box}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font:300 17px/1.6 Jost,system-ui,sans-serif;color:#fff;background:#1a1417;overflow:hidden}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1);transition:opacity 1.6s ease,transform 10s linear;display:grid;place-items:center}
+.slide.on{opacity:1;transform:scale(1.12)}
+.shade{position:absolute;inset:0;z-index:1;background:linear-gradient(rgba(60,15,25,.55),rgba(60,15,25,.3) 40%,rgba(60,15,25,.75))}
+#petals{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2}
+.fp{position:absolute;bottom:-50px;opacity:.75;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg)}}
+.wrap{position:relative;z-index:3;height:100%;display:flex;align-items:center;justify-content:center;padding:calc(24px + env(safe-area-inset-top,0px)) 24px calc(60px + env(safe-area-inset-bottom,0px));text-align:center}
+.box{max-width:580px;padding:42px 30px;border:1px solid rgba(255,255,255,.6);background:rgba(123,45,59,.4);backdrop-filter:blur(5px);border-radius:10px;opacity:0;transform:translateY(40px) scale(.94);transition:opacity 1s .5s,transform 1s .5s}
+.go .box{opacity:1;transform:none}
+.k{letter-spacing:.4em;text-transform:uppercase;font-size:14px;color:var(--blue)}
+h1{font:400 clamp(30px,9vw,60px)/1.1 "Cormorant Garamond",Georgia,serif;margin:12px 0;white-space:nowrap}
+.ch{display:inline-block;opacity:0}
+.go .ch{animation:pop .8s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(50px) scale(.3) rotate(-14deg)}to{opacity:1;transform:none}}
+.date{font:600 clamp(24px,5vw,34px) "Cormorant Garamond",serif;letter-spacing:.06em;border-top:1px solid var(--blue);border-bottom:1px solid var(--blue);display:inline-block;padding:8px 22px;margin:6px 0 12px;background:linear-gradient(90deg,#fff,var(--blue),#fff);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+.sm{font-size:15px;letter-spacing:.16em;text-transform:uppercase}
+.cdn{font:italic 24px "Cormorant Garamond",serif;margin:14px 0}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.btn{background:#fff;color:#7b2d3b;border:0;text-decoration:none;padding:11px 22px;border-radius:999px;font:500 15px Jost,sans-serif;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:scale(1.08) rotate(-2deg)}
+.wrap{transition:opacity .9s}
+.pr{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:24px;text-align:center;opacity:0;pointer-events:none;transition:opacity .9s}
+.pr h2{font:400 clamp(46px,12vw,96px)/1.05 "Cormorant Garamond",Georgia,serif;margin:0}
+.promo .pr{opacity:1;pointer-events:auto}
+.promo .wrap{opacity:0;pointer-events:none}
+.dots{position:absolute;z-index:4;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:0;right:0;display:flex;justify-content:center;gap:10px}
+.dots button{width:10px;height:10px;border-radius:50%;border:1px solid #fff;background:transparent;padding:0;cursor:pointer}
+.dots button.on{background:var(--blue);border-color:var(--blue)}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:60}
+#intro{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;background:radial-gradient(circle at 50% 40%,#9c3a4d,#3a1520 70%);cursor:pointer;transition:opacity 1s,transform 1.2s}
+#intro.open{opacity:0;transform:scale(1.7);pointer-events:none}
+.env{position:relative;width:min(78vw,360px);height:min(52vw,240px);background:#dcebf5;border-radius:8px;box-shadow:0 30px 60px rgba(0,0,0,.5);animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(-1deg)}}
+.env::before{content:"";position:absolute;inset:0;border-radius:8px;background:linear-gradient(to bottom right,transparent 49.5%,#c4dcec 50%) left/50% 100% no-repeat,linear-gradient(to bottom left,transparent 49.5%,#b3d1e6 50%) right/50% 100% no-repeat}
+.flap{position:absolute;left:0;right:0;top:0;height:62%;background:var(--blue);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s}
+.open .flap{transform:rotateX(180deg)}
+.seal{position:absolute;left:50%;top:60%;width:66px;height:66px;margin:-33px 0 0 -33px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#c04e63,#7b2d3b 60%,#4a1622);color:#fff;font:600 21px "Cormorant Garamond",serif;display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.45);animation:pulse 1.5s infinite;z-index:2}
+@keyframes pulse{50%{transform:scale(1.14)}}
+.open .seal{opacity:0;transition:opacity .3s}
+.tap{letter-spacing:.3em;text-transform:uppercase;font-size:14px;color:var(--blue);text-align:center;animation:pulse 2s infinite}
+@media (prefers-reduced-motion:reduce){.slide{transition:opacity 1s}.slide.on{transform:none}}
+#ask{position:fixed;inset:0;z-index:70;background:rgba(26,20,23,.75);display:flex;align-items:center;justify-content:center;padding:24px}
+#ask[hidden]{display:none}
+.dlg{background:#fff;color:#2e2328;max-width:420px;width:100%;border-radius:16px;padding:30px;text-align:center}
+.dlg .em{font-size:46px}
+.dlg h2{font:600 32px "Cormorant Garamond",serif;margin:4px 0 8px}
+.dlg p{margin:0 0 18px;color:#6f6168}
+.dlg .btn{background:#7b2d3b;color:#fff;margin:4px}
+.dlg .btn.alt{background:#a9cbe3;color:#2e2328}
+</style>
+</head>
+<body>
+<div id="slides"></div><div class="shade"></div>
+<main class="wrap"><div class="box">
+<div class="k">Save the Date</div>
+<h1 id="names"></h1>
+<div class="date" id="date"></div>
+<div class="sm" id="venue"></div>
+<div class="cdn" id="cdn"></div>
+<div class="btns"><a class="btn" id="more2" href="gallery.html">📷 Sien meer van ons</a><a class="btn" id="cal" target="_blank" rel="noopener" href="#">📅 Add to calendar</a><button class="btn" id="nope" type="button">😢 Can't make it</button></div>
+<p style="margin:14px 0 0;font:italic 20px 'Cormorant Garamond',serif">Formal invitation to follow</p>
+</div></main>
+<div class="pr"><h2>Sien meer van ons</h2><a class="btn" id="more" href="gallery.html">Kyk na al ons foto's →</a></div>
+<div class="dots" id="dots"></div>
+<div id="ask" hidden><div class="dlg"><div class="em">🥺</div><h2>Are you 100% sure?</h2><p>We would really love to celebrate with you.</p><button class="btn" id="yes" type="button">Yes, I'm 100% sure</button><button class="btn alt" id="no" type="button">Actually, I'll be there! 🎉</button></div></div>
+<div id="intro"><div class="env"><div class="flap"></div><div class="seal">T&amp;C</div></div><div class="tap">💌 Tap the seal to open</div></div>
+<canvas id="fx"></canvas>
+
+<script>
+// ===== EDIT THESE =====
+var C={names:"Thane & Chanel",dateText:"9 October 2027",venue:"Cradle Valley",email:"you@example.com",target:"2027-10-09T15:00:00",
+cal:"https://calendar.google.com/calendar/render?action=TEMPLATE&text=Thane+%26+Chanel%27s+Wedding&dates=20271009T130000Z/20271009T200000Z&location=Cradle+Valley"};
+// Put your photos in a folder called "photos" next to this file, then list them here.
+var REPO="thanesnyman/Thane_Troue";   // your GitHub username/repository
+var FOLDERS=["photos",""];            // photos are found automatically: "photos" folder first, then the main list
+var GALLERY="gallery.html";           // the "Sien meer van ons" photo page
+var HERO_MAX=12;                      // most photos used in the slideshow
+var SECONDS=5;                        // seconds per photo
+var MANUAL=[];                        // backup list if needed, e.g. ["photos/a.jpg","photos/b.jpg"]
+// ======================
+var $=function(i){return document.getElementById(i)};
+document.title="Save the Date · "+C.names;
+$("date").textContent=C.dateText;$("venue").textContent=C.venue;$("cal").href=C.cal;$("more").href=GALLERY;$("more2").href=GALLERY;
+C.names.split("").forEach(function(ch,k){var s=document.createElement("span");s.className="ch";s.textContent=ch==" "?"\u00a0":ch;s.style.animationDelay=(k*.07+.7)+"s";$("names").appendChild(s)});
+var days=Math.ceil((new Date(C.target)-new Date())/864e5);
+$("cdn").textContent=days>1?days+" sleeps to go ✨":days===1?"Tomorrow! 🎊":days===0?"Today's the day! 💍":"We're married! 🥂";
+
+// confetti
+var cv=$("fx"),cx=cv.getContext("2d"),P=[],W,H,COL=["#7b2d3b","#a9cbe3","#ffffff","#e8b4bf","#5d8fb3","#f5d9a8"];
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);
+function burst(x,y,n){for(var k=0;k<n;k++){var a=Math.random()*6.283,s=4+Math.random()*9;P.push({x:x,y:y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-6,r:Math.random()*6,vr:(Math.random()-.5)*.4,w:6+Math.random()*6,h:3+Math.random()*4,c:COL[k%COL.length],l:120+Math.random()*60})}}
+(function loop(){cx.clearRect(0,0,W,H);for(var k=P.length-1;k>=0;k--){var p=P[k];p.x+=p.vx;p.y+=p.vy;p.vy+=.22;p.vx*=.99;p.r+=p.vr;p.l--;if(p.l<0||p.y>H+20){P.splice(k,1);continue}cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.globalAlpha=Math.min(1,p.l/40);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()}requestAnimationFrame(loop)})();
+
+
+// envelope
+$("intro").onclick=function(){var i=this;if(i.classList.contains("open"))return;i.classList.add("open");document.body.classList.add("go");
+setTimeout(function(){burst(W*.5,H*.45,170);burst(W*.2,H*.6,80);burst(W*.8,H*.6,80)},700);
+setTimeout(function(){i.remove()},1900)};
+var ask=$("ask"),dlg=ask.querySelector(".dlg"),dlg0=dlg.innerHTML;
+function shut(){ask.hidden=true;dlg.innerHTML=dlg0;bindAsk()}
+function bindAsk(){
+$("yes").onclick=function(){dlg.innerHTML='<div class="em">💙</div><h2>We will miss you</h2><p>Thank you for letting us know. We will send you lots of love on the day.</p><button class="btn" id="cl" type="button">Close</button>';$("cl").onclick=shut;
+setTimeout(function(){location.href="mailto:"+C.email+"?subject="+encodeURIComponent("Sorry, I can't make it")+"&body="+encodeURIComponent("Hi "+C.names+", I'm so sorry but I won't be able to join you on "+C.dateText+". My name: ")},500)};
+$("no").onclick=function(){shut();burst(W*.5,H*.5,200);burst(W*.2,H*.6,90);burst(W*.8,H*.6,90)}}
+bindAsk();
+$("nope").onclick=function(){ask.hidden=false};
+document.addEventListener("pointerdown",function(e){if(document.body.classList.contains("go")&&!e.target.closest("a,button,#ask"))burst(e.clientX,e.clientY,40)});
+
+// slideshow
+var els=[],dots=[],i=0,timer;
+var promoUrl=null;
+function show(n){i=n;[n,(n+1)%els.length].forEach(function(k){var d=els[k];if(d.dataset.u&&!d.style.backgroundImage)d.style.backgroundImage="url('"+d.dataset.u+"')"});
+els.forEach(function(e,k){e.classList.toggle("on",k===n)});dots.forEach(function(e,k){e.classList.toggle("on",k===n)});
+document.body.classList.toggle("promo",!!promoUrl&&n===els.length-1)}
+function restart(){clearTimeout(timer);if(els.length>1)timer=setTimeout(function(){show((i+1)%els.length);restart()},(promoUrl&&i===els.length-1?7:SECONDS)*1000)}
+function build(list,img){list.forEach(function(s,n){var d=document.createElement("div");d.className="slide";if(img)d.dataset.u=s;else d.style.background=s;$("slides").appendChild(d);els.push(d);var b=document.createElement("button");b.setAttribute("aria-label","Photo "+(n+1));b.onclick=function(){show(n);restart()};$("dots").appendChild(b);dots.push(b)});show(0);restart()}
+
+// photos from GitHub: found automatically
+function isImg(n){return /\.(jpe?g|png|webp|gif|avif)$/i.test(n)}
+function list(k){if(k>=FOLDERS.length)return Promise.resolve([]);var f=FOLDERS[k];
+return fetch("https://api.github.com/repos/"+REPO+"/contents/"+f).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(a){
+var l=a.filter(function(x){return x.type==="file"&&isImg(x.name)}).map(function(x){return(f?f+"/":"")+x.name});return l.length?l:list(k+1)}).catch(function(){return list(k+1)})}
+function pickN(arr,k){if(arr.length<=k)return arr.slice();var o=[];for(var j=0;j<k;j++)o.push(arr[Math.floor(j*arr.length/k)]);return o}
+list(0).then(function(l){if(!l.length)l=MANUAL.slice();
+l.sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
+var ALL=l.map(encodeURI),base=ALL;
+if(ALL.length>1){promoUrl=ALL[ALL.length-1];base=ALL.slice(0,-1)}
+var pics=pickN(base,Math.max(1,HERO_MAX-(promoUrl?1:0)));if(promoUrl)pics.push(promoUrl);
+pics.length?build(pics,true):build(["linear-gradient(160deg,#7b2d3b,#3a1520)","linear-gradient(160deg,#a9cbe3,#5d8fb3)","linear-gradient(160deg,#5c2230,#a9cbe3)"],false)});
+</script>
+</body>
+</html>
