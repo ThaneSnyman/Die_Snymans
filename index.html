@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thane &amp; Chanel · Wedding</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f9fc;--card:#fff;--ink:#2e2328;--muted:#6f6168;--accent:#7b2d3b;--on:#fff;--line:#d5e3ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1417;--card:#261c20;--ink:#f1e8ec;--muted:#b7a6ad;--accent:#a9cbe3;--on:#1a1417;--line:#3b2c32}}
+:root[data-theme="dark"]{--bg:#1a1417;--card:#261c20;--ink:#f1e8ec;--muted:#b7a6ad;--accent:#a9cbe3;--on:#1a1417;--line:#3b2c32}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(60px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.7 Jost,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;margin:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:20px;padding:14px 20px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+nav a:hover{color:var(--accent)}
+section{max-width:900px;margin:0 auto;padding:76px 22px;position:relative;z-index:1}
+h2{font-size:clamp(34px,7vw,52px);text-align:center;margin-bottom:6px}
+.sub{text-align:center;color:var(--muted);margin:0 0 36px;font:italic 21px "Cormorant Garamond",serif}
+#petals{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.fp{position:absolute;bottom:-50px;opacity:.6;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg)}}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:60}
+#home{max-width:none;min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;background:linear-gradient(120deg,#4a1220,#7b2d3b,#5d8fb3,#a9cbe3,#7b2d3b);background-size:300% 300%;animation:flow 14s ease infinite;text-shadow:0 2px 14px rgba(0,0,0,.25)}
+@keyframes flow{50%{background-position:100% 50%}}
+#home{position:relative;overflow:hidden}
+.hs{position:absolute;inset:0;z-index:0}
+.hs .s{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1);transition:opacity 1.4s,transform 7s linear}
+.hs .s.on{opacity:1;transform:scale(1.07)}
+.hshade{position:absolute;inset:0;z-index:1;background:linear-gradient(rgba(74,18,32,.55),rgba(74,18,32,.35) 45%,rgba(74,18,32,.72))}
+.hc{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;transition:opacity .9s}
+.pr{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:24px;opacity:0;pointer-events:none;transition:opacity .9s}
+.pr h2{font-size:clamp(46px,12vw,100px);color:#fff;margin:0;line-height:1.05}
+.promo .hc{opacity:0;pointer-events:none}
+.promo .pr{opacity:1;pointer-events:auto}
+.kicker{letter-spacing:.35em;text-transform:uppercase;font-size:13px}
+#names{font-size:clamp(50px,13vw,110px);line-height:1.05;margin:14px 0}
+.ch{display:inline-block;animation:pop .8s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(50px) scale(.3) rotate(-14deg)}to{opacity:1;transform:none}}
+#dateText{font:600 clamp(22px,5vw,32px) "Cormorant Garamond",serif;letter-spacing:.1em}
+.cd{display:flex;justify-content:center;gap:12px;margin:32px 0;flex-wrap:wrap}
+.cd div{background:rgba(255,255,255,.18);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.4);border-radius:16px;padding:14px 18px;min-width:80px}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.cd b{display:block;font:600 32px "Cormorant Garamond",serif}
+.cd span{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.mqw{overflow:hidden;white-space:nowrap;background:var(--accent);color:var(--on);padding:12px 0;font:500 14px Jost;letter-spacing:.25em;position:relative;z-index:2}
+#mq{display:inline-block;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 18px 40px rgba(123,45,59,.18)}
+.two{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.tl{border-left:2px solid var(--line);margin-left:8px}
+.tl div{position:relative;padding:0 0 28px 28px}
+.tl div::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 6px rgba(169,203,227,.5)}
+.tl small{color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
+.tl h3{font-size:26px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}.row b{font-weight:500}
+.btn{display:inline-block;background:var(--accent);color:var(--on);text-decoration:none;padding:13px 28px;border-radius:999px;border:0;cursor:pointer;font:500 16px Jost,sans-serif;transition:transform .2s}
+.btn:hover{transform:scale(1.07) rotate(-2deg)}
+.c{text-align:center}
+.gal{position:relative;aspect-ratio:16/10;border-radius:20px;overflow:hidden;background:var(--line);box-shadow:0 20px 50px rgba(123,45,59,.25)}
+.g{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s;display:grid;place-items:center;color:#fff;font-size:22px;text-align:center}
+.g.on{opacity:1}
+.gd{display:flex;justify-content:center;gap:10px;margin-top:14px}
+.gd button{width:10px;height:10px;border-radius:50%;border:1px solid var(--accent);background:transparent;padding:0;cursor:pointer}
+.gd button.on{background:var(--accent)}
+.game{position:relative;height:340px;border-radius:20px;overflow:hidden;background:linear-gradient(180deg,rgba(169,203,227,.45),rgba(123,45,59,.18));border:1px solid var(--line)}
+#sc{position:absolute;top:10px;left:16px;z-index:2;font-weight:500}
+.pt{position:absolute;top:-50px;font-size:38px;cursor:pointer;user-select:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(430px) rotate(240deg)}}
+details{border-bottom:1px solid var(--line);padding:16px 4px}
+summary{cursor:pointer;font:600 23px "Cormorant Garamond",serif}
+details p{margin:10px 0 0;color:var(--muted)}
+input,select,textarea{width:100%;padding:12px;margin:6px 0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+label{font-size:14px;color:var(--muted)}
+footer{text-align:center;color:var(--muted);padding:40px 22px 90px;font-size:14px;position:relative;z-index:1}
+#fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:60px;height:60px;border-radius:50%;border:0;background:var(--accent);color:var(--on);font-size:28px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<nav>
+<a href="#home">Home</a><a href="#story">Our Story</a><a href="#timeline">Timeline</a><a href="#gallery">Photos</a><a href="#details">Details</a><a href="#schedule">Schedule</a><a href="#stay">Stay</a><a href="#playlist">Playlist</a><a href="#game">Game</a><a href="#faq">FAQ</a><a href="#rsvp">RSVP</a><a href="#gifts">Gifts</a>
+</nav>
+
+<section id="home">
+<div class="hs" id="hs"></div><div class="hshade"></div>
+<div class="hc">
+<div class="kicker">We are getting married</div>
+<h1 id="names"></h1>
+<div id="dateText"></div>
+<div class="cd"><div><b id="d">0</b><span>Days</span></div><div><b id="h">0</b><span>Hours</span></div><div><b id="m">0</b><span>Minutes</span></div><div><b id="s">0</b><span>Seconds</span></div></div>
+<a class="btn" style="background:#fff;color:#7b2d3b" href="#rsvp">RSVP now 💌</a>
+</div>
+<div class="pr"><h2>Sien meer van ons</h2><a class="btn" style="background:#fff;color:#7b2d3b" href="gallery.html">Kyk na al ons foto's →</a></div>
+</section>
+<div class="mqw"><div id="mq"></div></div>
+
+<section id="story">
+<h2 class="rv">Our Story</h2><p class="sub rv">How it all began</p>
+<div class="two">
+<div class="card rv"><h3>The Beginning</h3><p>Tell the story of how you met here. Keep it warm, a little funny and very you.</p></div>
+<div class="card rv"><h3>The Proposal</h3><p>Share how the proposal happened: where, when, and who was hiding in the bushes.</p></div>
+</div>
+</section>
+
+<section id="timeline">
+<h2 class="rv">Our Timeline</h2><p class="sub rv">The moments that brought us here</p>
+<div class="tl">
+<div class="rv"><small>[Month Year]</small><h3>First Meeting</h3><p>A short caption.</p></div>
+<div class="rv"><small>[Month Year]</small><h3>Getting to Know Each Other</h3><p>A short caption.</p></div>
+<div class="rv"><small>[Date]</small><h3>Officially Together</h3><p>A short caption.</p></div>
+<div class="rv"><small>[Date]</small><h3>The Proposal</h3><p>She said yes. Or he did. Add your own line.</p></div>
+<div class="rv"><small>9 October 2027</small><h3>The Wedding</h3><p>The best party of the year.</p></div>
+</div>
+</section>
+
+<section id="gallery">
+<h2 class="rv">Our Photos</h2><p class="sub rv">A little slideshow of us</p>
+<div class="gal rv" id="gal"></div><div class="gd" id="gd"></div>
+<p class="c" style="margin-top:26px"><a class="btn" href="gallery.html">Sien meer van ons →</a></p>
+</section>
+
+<section id="details">
+<h2 class="rv">Wedding Details</h2><p class="sub rv">Ceremony, dinner and dancing in one place</p>
+<div class="card rv">
+<div class="row"><b>Date</b><span>Saturday, 9 October 2027</span></div>
+<div class="row"><b>Time</b><span>[Ceremony time]. Please be seated 15 minutes early.</span></div>
+<div class="row"><b>Venue</b><span>Cradle Valley</span></div>
+</div>
+<p class="c" style="margin-top:26px"><a class="btn" href="https://maps.google.com/?q=Cradle+Valley" target="_blank" rel="noopener">Get Directions 📍</a> <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Thane+%26+Chanel%27s+Wedding&dates=20271009T130000Z/20271009T200000Z&location=Cradle+Valley" target="_blank" rel="noopener">Add to Calendar 📅</a></p>
+</section>
+
+<section id="schedule">
+<h2 class="rv">Wedding Itinerary</h2><p class="sub rv">Saturday, 9 October 2027</p>
+<div class="card rv">
+<div class="row"><b>💍 Ceremony</b><span>[00:00]</span></div>
+<div class="row"><b>🥂 Canapés</b><span>[00:00]</span></div>
+<div class="row"><b>🍽️ Reception</b><span>[00:00]</span></div>
+<div class="row"><b>🪩 Dancing &amp; Celebration</b><span>[00:00]</span></div>
+</div>
+</section>
+
+<section id="stay">
+<h2 class="rv">Where to Stay</h2><p class="sub rv">Nearby options for the night</p>
+<div class="two">
+<div class="card rv"><h3>[Lodge name]</h3><p>[Area]</p></div>
+<div class="card rv"><h3>[Guesthouse name]</h3><p>[Area]</p></div>
+<div class="card rv"><h3>[Hotel name]</h3><p>[Area]</p></div>
+</div>
+</section>
+
+<section id="playlist">
+<h2 class="rv">Our Playlist</h2><p class="sub rv">Help us build the perfect dance floor</p>
+<p class="c rv"><a class="btn" href="https://open.spotify.com/" target="_blank" rel="noopener">Add a Song 🎶</a></p>
+<p class="c" style="color:var(--muted);font-size:14px">Replace this link with your collaborative Spotify playlist.</p>
+</section>
+
+<section id="gamesec">
+<h2 class="rv">Petal Poppers 🌸</h2><p class="sub rv">Tap the falling treats and beat your best score</p>
+<div class="game rv" id="game"><div id="sc"></div></div>
+</section>
+
+<section id="faq">
+<h2 class="rv">Questions</h2><p class="sub rv">The things guests usually ask</p>
+<details><summary>What should I wear?</summary><p>[Dress code. Burgundy and light blue are welcome!]</p></details>
+<details><summary>Are children welcome?</summary><p>[Your answer]</p></details>
+<details><summary>Can I bring a plus-one?</summary><p>[Your answer]</p></details>
+<details><summary>What is the weather like?</summary><p>[Typical weather for the date and location]</p></details>
+<details><summary>Can I take photos during the ceremony?</summary><p>[Your answer]</p></details>
+</section>
+
+<section id="rsvp">
+<h2 class="rv">RSVP</h2><p class="sub rv">Kindly respond by [RSVP date]</p>
+<div class="card rv">
+<label>Your name(s)</label><input id="rn">
+<label>Will you be joining us?</label>
+<select id="ra"><option>Yes, we will be there 🎉</option><option>Sadly, we cannot make it</option></select>
+<label>Number of guests</label><input id="rg" type="number" min="1" value="1">
+<label>Dietary needs or a message</label><textarea id="rm" rows="3"></textarea>
+<p class="c"><button class="btn" id="send" type="button">Send RSVP 💌</button></p>
+</div>
+</section>
+
+<section id="gifts">
+<h2 class="rv">Gifts</h2><p class="sub rv">Your presence is all we need</p>
+<p class="c" style="max-width:560px;margin:auto">Add a short, gracious note here about gifts, plus your banking details or registry link if you'd like to share them.</p>
+</section>
+
+<footer>Made with love · Thane &amp; Chanel</footer>
+<button id="fab" type="button" aria-label="Confetti">🎉</button>
+
+<script>
+// ===== EDIT THESE =====
+var C={
+ names:"Thane & Chanel",
+ dateText:"Saturday, 9 October 2027",
+ target:"2027-10-09T15:00:00",
+ rsvpEmail:"you@example.com",
+ repo:"thanesnyman/Thane_Troue",  // your GitHub username/repository
+ folders:["photos",""],           // photos are found automatically: "photos" folder first, then the main list
+ gallery:"gallery.html",          // the "Sien meer van ons" photo page
+ heroMax:12,                      // most photos used in the top slideshow
+ heroSeconds:5,                   // seconds per photo at the top
+ manual:[]                        // backup list if needed, e.g. ["photos/a.jpg","photos/b.jpg"]
+};
+// ======================
+var $=function(i){return document.getElementById(i)};
+document.title=C.names+" · Wedding";
+$("dateText").textContent=C.dateText;
+C.names.split("").forEach(function(ch,k){var s=document.createElement("span");s.className="ch";s.textContent=ch==" "?"\u00a0":ch;s.style.animationDelay=(k*.07+.2)+"s";$("names").appendChild(s)});
+var t0="SAVE THE DATE ✦ "+C.dateText.toUpperCase()+" ✦ CRADLE VALLEY ✦ DRESS TO DANCE ✦ ";
+$("mq").textContent=t0+t0+t0+t0;
+function tick(){var t=new Date(C.target)-new Date();if(t<0)t=0;var s=Math.floor(t/1000);
+$("d").textContent=Math.floor(s/86400);$("h").textContent=Math.floor(s%86400/3600);$("m").textContent=Math.floor(s%3600/60);$("s").textContent=s%60}
+tick();setInterval(tick,1000);
+
+// confetti
+var cv=$("fx"),cx=cv.getContext("2d"),P=[],W,H,COL=["#7b2d3b","#a9cbe3","#ffffff","#e8b4bf","#5d8fb3","#f5d9a8"];
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);
+function burst(x,y,n){for(var k=0;k<n;k++){var a=Math.random()*6.283,s=4+Math.random()*9;P.push({x:x,y:y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-6,r:Math.random()*6,vr:(Math.random()-.5)*.4,w:6+Math.random()*6,h:3+Math.random()*4,c:COL[k%COL.length],l:120+Math.random()*60})}}
+(function loop(){cx.clearRect(0,0,W,H);for(var k=P.length-1;k>=0;k--){var p=P[k];p.x+=p.vx;p.y+=p.vy;p.vy+=.22;p.vx*=.99;p.r+=p.vr;p.l--;if(p.l<0||p.y>H+20){P.splice(k,1);continue}cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.globalAlpha=Math.min(1,p.l/40);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()}requestAnimationFrame(loop)})();
+setTimeout(function(){burst(W*.5,H*.35,150);burst(W*.2,H*.5,70);burst(W*.8,H*.5,70)},600);
+$("fab").onclick=function(){burst(W*.5,H*.6,120);burst(W*.2,H*.7,60);burst(W*.8,H*.7,60)};
+
+
+// gallery
+var gs=[],gd=[],gi=0;
+function gz(n){gi=n;gs.forEach(function(e,k){e.classList.toggle("on",k===n)});gd.forEach(function(e,k){e.classList.toggle("on",k===n)})}
+function gb(list,img){list.forEach(function(s,n){var d=document.createElement("div");d.className="g";if(img)d.style.backgroundImage="url('"+s+"')";else{d.style.background=s;d.textContent="📸 Your photos go here"}$("gal").appendChild(d);gs.push(d);var b=document.createElement("button");b.onclick=function(){gz(n)};$("gd").appendChild(b);gd.push(b)});gz(0);setInterval(function(){gz((gi+1)%gs.length)},4000)}
+// photos from GitHub: one list feeds the top slideshow and the photo section
+function isImg(n){return /\.(jpe?g|png|webp|gif|avif)$/i.test(n)}
+function list(k){if(k>=C.folders.length)return Promise.resolve([]);var f=C.folders[k];
+return fetch("https://api.github.com/repos/"+C.repo+"/contents/"+f).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(a){
+var l=a.filter(function(x){return x.type==="file"&&isImg(x.name)}).map(function(x){return(f?f+"/":"")+x.name});return l.length?l:list(k+1)}).catch(function(){return list(k+1)})}
+function pickN(arr,k){if(arr.length<=k)return arr.slice();var o=[];for(var j=0;j<k;j++)o.push(arr[Math.floor(j*arr.length/k)]);return o}
+var hsl=[],ht,promoUrl=null;
+function hshow(n){clearTimeout(ht);
+[n,(n+1)%hsl.length].forEach(function(k){var d=hsl[k];if(d.dataset.u&&!d.style.backgroundImage)d.style.backgroundImage="url('"+d.dataset.u+"')"});
+hsl.forEach(function(e,k){e.classList.toggle("on",k===n)});
+var promo=!!promoUrl&&n===hsl.length-1;$("home").classList.toggle("promo",promo);
+if(hsl.length>1)ht=setTimeout(function(){hshow((n+1)%hsl.length)},(promo?6:C.heroSeconds)*1000)}
+list(0).then(function(l){if(!l.length)l=C.manual.slice();
+l.sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
+var ALL=l.map(encodeURI),base=ALL;
+if(ALL.length>1){promoUrl=ALL[ALL.length-1];base=ALL.slice(0,-1)}
+var pics=pickN(base,Math.max(1,C.heroMax-(promoUrl?1:0)));if(promoUrl)pics.push(promoUrl);
+if(ALL.length){pics.forEach(function(u){var d=document.createElement("div");d.className="s";d.dataset.u=u;$("hs").appendChild(d);hsl.push(d)});hshow(0)}
+var gl=pickN(ALL,12);
+gl.length?gb(gl,true):gb(["linear-gradient(160deg,#7b2d3b,#3a1520)","linear-gradient(160deg,#a9cbe3,#5d8fb3)","linear-gradient(160deg,#5c2230,#a9cbe3)"],false)});
+
+// scroll reveal + game
+var playing=false;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("in");if(e.target.id==="game")playing=e.isIntersecting})},{threshold:.15});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+var sc=0,best=0;try{best=+localStorage.getItem("best")||0}catch(e){}
+function up(){$("sc").textContent="Score "+sc+" · Best "+best}up();
+var pe=["🌸","💙","❤️","🥂","🎉"];
+setInterval(function(){if(!playing)return;var p=document.createElement("span");p.className="pt";p.textContent=pe[Math.floor(Math.random()*5)];p.style.left=Math.random()*88+"%";p.style.animationDuration=(3+Math.random()*3)+"s";
+p.onclick=function(){var r=p.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,26);sc++;if(sc>best){best=sc;try{localStorage.setItem("best",best)}catch(x){}}up();p.remove()};
+p.onanimationend=function(){p.remove()};$("game").appendChild(p)},550);
+
+// RSVP
+$("send").onclick=function(){burst(W*.5,H*.5,200);var b="Name: "+$("rn").value+"\nResponse: "+$("ra").value+"\nGuests: "+$("rg").value+"\nMessage: "+$("rm").value;
+setTimeout(function(){location.href="mailto:"+C.rsvpEmail+"?subject="+encodeURIComponent("RSVP")+"&body="+encodeURIComponent(b)},900)};
+</script>
+</body>
+</html>
