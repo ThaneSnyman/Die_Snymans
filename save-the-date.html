@@ -127,7 +127,7 @@ var ask=$("ask"),dlg=ask.querySelector(".dlg"),dlg0=dlg.innerHTML;
 function shut(){ask.hidden=true;dlg.innerHTML=dlg0;bindAsk()}
 function bindAsk(){
 $("yes").onclick=function(){
-dlg.innerHTML='<div class="em"></div><h2>Wie gaan ons mis?</h2><p>Los asseblief jou naam sodat ons weet dis jy.</p><input id="fn" type="text" placeholder="Jou naam" autocomplete="name"><textarea id="fm" rows="2" placeholder="\'n Boodskap vir ons (opsioneel)"></textarea><div class="err" id="fe"></div><button class="btn" id="fs" type="button">Stuur</button><button class="btn alt" id="fb" type="button">Terug</button>';
+dlg.innerHTML='<div class="em"></div><h2>Wie gaan ons mis?</h2><p></p><input id="fn" type="text" placeholder="Jou naam" autocomplete="name"><textarea id="fm" rows="2" placeholder="\'n Boodskap vir ons (opsioneel)"></textarea><div class="err" id="fe"></div><button class="btn" id="fs" type="button">Stuur</button><button class="btn alt" id="fb" type="button">Terug</button>';
 $("fb").onclick=shut;
 $("fs").onclick=function(){var n=$("fn").value.trim(),m=$("fm").value.trim();
 if(!n){$("fe").textContent="Voer asseblief jou naam in.";return}
