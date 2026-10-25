@@ -110,7 +110,7 @@ document.title="Save the Date · "+C.names;
 $("date").textContent=C.dateText;$("venue").textContent=C.venue;$("cal").href=C.cal;$("more2").href=GALLERY;
 C.names.split("").forEach(function(ch,k){var s=document.createElement("span");s.className="ch";s.textContent=ch==" "?"\u00a0":ch;s.style.animationDelay=(k*.07+.7)+"s";$("names").appendChild(s)});
 var days=Math.ceil((new Date(C.target)-new Date())/864e5);
-$("cdn").textContent=days>1?"Nog "+days+" slapies oor ✨":days===1?"Môre! 🎊":days===0?"Vandag is die dag! 💍":"Ons is getroud! 🥂";
+$("cdn").textContent=days>1?"Nog "+days+" dae oor ✨":days===1?"Môre! 🎊":days===0?"Vandag is die dag! 💍":"Ons is getroud! 🥂";
 
 // confetti
 var cv=$("fx"),cx=cv.getContext("2d"),P=[],W,H,COL=["#7b2d3b","#a9cbe3","#ffffff","#e8b4bf","#5d8fb3","#f5d9a8"];
